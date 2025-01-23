@@ -16,6 +16,7 @@ section {
   background-color: var(--light);
   font-family: var(--bodyFont);
   color: var(--darkgray);
+  overflow-x: hidden; // Ensure no horizontal scroll
 }
 
 .text-highlight {
@@ -598,4 +599,12 @@ iframe.pdf {
   background: var(--secondary);
   transition: width 0.2s ease;
   z-index: 9999;
+}
+
+// Ensure all elements do not exceed the viewport width
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  max-width: 100%;
 }

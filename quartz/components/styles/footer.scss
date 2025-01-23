@@ -2,6 +2,15 @@ footer {
   text-align: left;
   margin-bottom: 4rem;
   opacity: 0.7;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f8f8f8;
+
+  & .footer-column {
+    flex: 1;
+    margin: 0 10px;
+  }
 
   & ul {
     list-style: none;
@@ -10,6 +19,34 @@ footer {
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    margin-top: -1rem;
+  }
+
+  & ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  & ul li a img {
+    vertical-align: middle;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    & .footer-column {
+      margin: 10px 0;
+    }
+
+    & ul {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    & ul li {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
   }
 }
